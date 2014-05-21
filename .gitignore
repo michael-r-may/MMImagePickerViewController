@@ -24,3 +24,6 @@ DerivedData
 *.hmap
 *.ipa
 
+# Mac OS X
+.DS_Store
+
