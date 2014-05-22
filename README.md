@@ -18,8 +18,7 @@ The code is just a few lines long:
 ```
     [[self imagePickerController] setDismissBlock:^(NSObject* image) {
         if([image isKindOfClass:[UIImage class]] == NO) return;
-        if(image == nil) return;
-        
+
         UITableViewCell* currentCell = [self currentCell];
         [currentCell setImage:(UIImage*)image];
     }];
