@@ -22,13 +22,22 @@ Then simply drag the project file in to your app and link to the libMMImagePicke
 The code itself is just a few lines long:
 
 ```
-    [[self imagePickerController] setDismissBlock:^(NSObject* image) {
-        if([image isKindOfClass:[UIImage class]] == NO) return;
-
-        UITableViewCell* currentCell = [self currentCell];
-        [currentCell setImage:(UIImage*)image];
-    }];
+    - (void)viewDidLoad
+    {
+        ...
+    	_imagePickerController = [MMImagePickerController imagePickerFlowFromViewController:self];
+    }
     
-    [[self imagePickerController] startFlow];
+    -(void)userDidTapCellImage 
+    {
+        [[self imagePickerController] setDismissBlock:^(NSObject* image) {
+            if([image isKindOfClass:[UIImage class]] == NO) return;
+    
+            UITableViewCell* currentCell = [self currentCell];
+            [currentCell setImage:(UIImage*)image];
+        }];
+        
+        [[self imagePickerController] startFlow];
+    }
 ```
 
