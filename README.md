@@ -10,10 +10,16 @@ To use it:
 pod 'MMImagePickerViewController', :podspec => 'http://michael-r-may.github.io/MMImagePickerViewController/MMImagePickerViewController.podspec'
 
 #####Git
+You can simply clone it with
 git clone https://github.com/michael-r-may/MMImagePickerViewController.git
+
+I would recommend using a git submodule inside your project in this case, though, as it's easier to maintain.
+
+git submodule add https://github.com/michael-r-may/MMImagePickerViewController.git
+
 Then simply drag the project file in to your app and link to the libMMImagePickerViewController.a file.
 
-The code is just a few lines long:
+The code itself is just a few lines long:
 
 ```
     [[self imagePickerController] setDismissBlock:^(NSObject* image) {
