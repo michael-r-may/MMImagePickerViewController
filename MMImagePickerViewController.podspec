@@ -57,7 +57,7 @@ Pod::Spec.new do |s|
   #
 
   s.platform     = :ios
-  s.platform     = :ios, "7.0"
+  s.platform     = :ios, "6.0"
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
